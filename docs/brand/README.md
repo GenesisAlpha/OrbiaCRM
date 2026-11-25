@@ -1,4 +1,4 @@
-# Marca
+# Marca — OrbiaCRM
 
 ## Símbolo e logotipo
 
@@ -20,8 +20,14 @@ três arquivos aqui **e** o `desenho.ts`; `tests/unit/marca-do-produto.test.tsx`
 que as cores dos dois lados coincidam.
 
 Os READMEs (pt, en, es) usam os arquivos diretamente, num `<picture>` que troca para a
-versão escura conforme o tema do GitHub. A LP (`deskcomm-site`) tem a própria cópia em
+versão escura conforme o tema do GitHub. A LP (`OrbiaSite`) tem a própria cópia em
 `components/Marca.tsx` e `app/icon.svg`.
+
+**Crédito de origem (MIT).** Estes SVGs são parte do fork de DeskcommCRM, criado por
+Rafael Melgaço. O aviso de copyright original e o agradecimento ao DeskcommCRM são mantidos
+conforme exigido pela licença MIT. O rebrand para OrbiaCRM (o CRM da ORBIA, focado em
+administração e gestão de vendas, com pagamentos como módulo adicional) altera a identidade
+documental, não os nomes de arquivo nem o código que os consome.
 
 Prova pela tela (2026-09-08, Supabase local fresco do `baseline.sql`, marca sem configurar):
 
@@ -36,7 +42,7 @@ Prova pela tela (2026-09-08, Supabase local fresco do `baseline.sql`, marca sem 
 | `evidence/marca/favicon-produto.png` | `/icon` gerado em runtime com o símbolo |
 | `evidence/marca/crm-login-revendedor.png` | Controle negativo: com `platform_branding.app_name` gravado, a fachada fica sem o desenho |
 | `evidence/marca/favicon-revendedor.png` | Controle negativo: o favicon volta à inicial sobre a cor de destaque |
-| `evidence/marca/lp-cabecalho.png` | Cabeçalho da LP (`deskcomm-site`) com o logotipo |
+| `evidence/marca/lp-cabecalho.png` | Cabeçalho da LP (`OrbiaSite`) com o logotipo |
 | `evidence/marca/lp-rodape.png` | Rodapé da LP com o símbolo |
 
 ## Social preview (Open Graph)
