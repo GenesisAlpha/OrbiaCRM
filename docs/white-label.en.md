@@ -1,10 +1,12 @@
-<!-- traduzido-de: docs/white-label.md@b4c1c13cdced -->
+<!-- traduzido-de: docs/white-label.md@85a55ef5cfa1 -->
 
 [🇧🇷 Português](white-label.md) · 🇺🇸 English · [🇪🇸 Español](white-label.es.md)
 
 # Installing for clients (agencies and resellers)
 
-A guide for whoever installs DeskcommCRM **for other companies** — agency, consultancy, reseller — and charges for it.
+A guide for whoever installs **OrbiaCRM** **for other companies** — agency, consultancy, reseller — and charges for it.
+
+> **Origin and license.** OrbiaCRM is a fork of DeskcommCRM, created by Rafael Melgaço and distributed under the **MIT** license. We keep the original copyright notice and thank the work done. OrbiaCRM is the ORBIA product line: focused on administration and sales management, with payments as an additional module and multiple possible surface brands.
 
 The license is MIT: you may modify it, host it for third parties, resell it and charge whatever you want. There is no royalty, no clause forbidding commercial hosting, and there is no paid edition that locks features away from your client.
 
@@ -247,7 +249,7 @@ Full installation guide: [`hostgator-setup-kit/README.md`](../hostgator-setup-ki
 
 ---
 
-*Last updated: 14 August 2026 — full revision after the own-brand epic. The two most quoted sentences in this document ("colors, fonts and theme are not configurable" and "the brand is per installation, not per organization") stopped being true and were rewritten with today's honest limit.*
+*Last updated: 25 November 2026 — rebrand to OrbiaCRM (the ORBIA CRM for administration and sales management, with payments as an additional module). Previously: 14 August 2026 — full revision after the own-brand epic.
 
 *This document exists in three languages, and the prerequisite that the previous version of this footer named has been paid for: the translations carry, on their first line, a seal with the hash of the original, and editing `docs/white-label.md` without re-sealing fails `pnpm test:unit`. After translating, re-seal with `pnpm exec tsx scripts/selar-traducao.ts --todas`.*
 

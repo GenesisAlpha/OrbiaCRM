@@ -2,7 +2,9 @@
 
 # Instalar para clientes (agências e revendedores)
 
-Guia para quem instala o DeskcommCRM **para outras empresas** — agência, consultoria, revendedor — e cobra por isso.
+Guia para quem instala o **OrbiaCRM** **para outras empresas** — agência, consultoria, revendedor — e cobra por isso.
+
+> **Origem e licença.** OrbiaCRM é um fork de DeskcommCRM, criado por Rafael Melgaço, distribuído sob licença **MIT**. Mantemos o aviso de copyright original e agradecemos o trabalho feito. O OrbiaCRM é a linha de produto da ORBIA: foco em administração e gestão de vendas, com os pagamentos como módulo adicional e várias marcas-superfície possíveis.
 
 A licença é MIT: você pode modificar, hospedar para terceiros, revender e cobrar o que quiser. Não há royalty, não há cláusula proibindo hospedagem comercial e não existe versão paga que trave funcionalidade do seu cliente.
 
@@ -245,7 +247,7 @@ Guia completo de instalação: [`hostgator-setup-kit/README.md`](../hostgator-se
 
 ---
 
-*Última atualização: 14 de agosto de 2026 — revisão completa depois do épico de marca própria. As duas frases mais citadas deste documento ("cores, fontes e tema não são configuráveis" e "a marca é por instalação, não por organização") deixaram de ser verdadeiras e foram reescritas com o limite honesto de hoje.*
+*Última atualização: 25 de novembro de 2026 — rebrand para OrbiaCRM (CRM da ORBIA para administração e gestão de vendas, pagamentos como módulo adicional). Anterior: 14 de agosto de 2026 — revisão completa depois do épico de marca própria. As duas frases mais citadas deste documento ("cores, fontes e tema não são configuráveis" e "a marca é por instalação, não por organização") deixaram de ser verdadeiras e foram reescritas com o limite honesto de hoje.*
 
 *Este documento existe em três idiomas, e o pré-requisito que a versão anterior deste rodapé nomeava foi pago: as traduções carregam na primeira linha um selo com o hash do original, e editar `docs/white-label.md` sem re-selar reprova `pnpm test:unit`. Depois de traduzir, re-sele com `pnpm exec tsx scripts/selar-traducao.ts --todas`.*
 

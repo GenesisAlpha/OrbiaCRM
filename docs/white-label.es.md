@@ -1,10 +1,12 @@
-<!-- traduzido-de: docs/white-label.md@b4c1c13cdced -->
+<!-- traduzido-de: docs/white-label.md@85a55ef5cfa1 -->
 
 [🇧🇷 Português](white-label.md) · [🇺🇸 English](white-label.en.md) · 🇪🇸 Español
 
 # Instalar para clientes (agencias y revendedores)
 
-Guía para quien instala DeskcommCRM **para otras empresas** — agencia, consultoría, revendedor — y cobra por ello.
+Guía para quien instala **OrbiaCRM** **para otras empresas** — agencia, consultoría, revendedor — y cobra por ello.
+
+> **Origen y licencia.** OrbiaCRM es un fork de DeskcommCRM, creado por Rafael Melgaço y distribuido bajo licencia **MIT**. Mantenemos el aviso de copyright original y agradecemos el trabajo realizado. OrbiaCRM es la línea de producto de ORBIA: centrada en administración y gestión de ventas, con los pagos como módulo adicional y varias marcas-superficie posibles.
 
 La licencia es MIT: puedes modificarlo, alojarlo para terceros, revenderlo y cobrar lo que quieras. No hay regalías, no hay cláusula que prohíba el alojamiento comercial y no existe una versión de pago que bloquee funciones a tu cliente.
 
@@ -247,7 +249,7 @@ Guía completa de instalación: [`hostgator-setup-kit/README.md`](../hostgator-s
 
 ---
 
-*Última actualización: 14 de agosto de 2026 — revisión completa después del épico de marca propia. Las dos frases más citadas de este documento ("colores, tipografías y tema no son configurables" y "la marca es por instalación, no por organización") dejaron de ser verdaderas y fueron reescritas con el límite honesto de hoy.*
+*Última actualización: 25 de noviembre de 2026 — rebrand a OrbiaCRM (el CRM de ORBIA para administración y gestión de ventas, con pagos como módulo adicional). Anterior: 14 de agosto de 2026 — revisión completa después del épico de marca propia.
 
 *Este documento existe en tres idiomas, y el requisito que la versión anterior de este pie nombraba fue pagado: las traducciones llevan en la primera línea un sello con el hash del original, y editar `docs/white-label.md` sin volver a sellar reprueba `pnpm test:unit`. Después de traducir, vuelve a sellar con `pnpm exec tsx scripts/selar-traducao.ts --todas`.*
 
