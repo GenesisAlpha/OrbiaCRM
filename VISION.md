@@ -1,24 +1,23 @@
-# 🧭 Visão — DeskcommCRM
+# 🧭 Visão — OrbiaCRM
 
 > **O sistema operacional de vendas com agentes de IA, open source, nativo no WhatsApp.**
 > Este documento é a fonte da verdade do posicionamento do projeto. Tudo que for público (README, site, docs, descrições) deriva daqui.
 
 ---
 
-## O nome
+## OrbiaCRM: o nome e a linha de produto
 
-**Deskcomm** vem de **Desk** (mesa) + **comm** (comércio): **o comercial de mesa**.
-A ideia que o nome carrega: toda a operação comercial de um negócio — atendimento, qualificação, funil, pós-venda — operada a partir de uma única mesa, por pessoas e por agentes de IA trabalhando juntos.
+**OrbiaCRM** é o CRM da **ORBIA**. O nome diz onde o produto vive: na administração e na gestão de vendas da operação comercial.
 
-O "CRM" no nome é a categoria de entrada, não o teto. O DeskcommCRM é **mais que um CRM**: é o sistema onde a venda acontece.
+O "CRM" é a categoria de entrada, não o teto. O OrbiaCRM é **mais que um CRM**: é o sistema onde a venda acontece. Os pagamentos entram como **módulo adicional**, com várias marcas-superfície possíveis, sem virar o centro da identidade do produto.
 
 ## De onde viemos, pra onde vamos
 
-O projeto nasceu em 2026 como um CRM operacional para **e-commerce brasileiro** — WhatsApp via WAHA, integração Nuvemshop, LGPD nativa. Quando abrimos o código, a comunidade decidiu outra coisa: a maioria dos adopters passou a rodar o Deskcomm em **clínicas, infoprodutos, imobiliárias, agências e prestadores de serviço** — qualquer negócio que vende conversando.
+O OrbiaCRM é um fork do DeskcommCRM, criado por Rafael Melgaço e distribuído sob licença **MIT**. A base nasceu em 2026 como um CRM operacional para **e-commerce brasileiro** — WhatsApp via WAHA, integração Nuvemshop, LGPD nativa. Na linha Orbia, a operação comercial continua no centro: **clínicas, infoprodutos, imobiliárias, agências e prestadores de serviço** — qualquer negócio que vende conversando.
 
 Os pedidos de feature dessa comunidade empurraram o produto na direção que hoje é a nossa identidade: **agentes de IA cada vez mais capazes, integrados ao sistema via MCP, operando o CRM de verdade**. O e-commerce continua sendo um caso de uso de primeira classe (foi nosso berço e a integração Nuvemshop prova isso) — mas ele é **um** vertical, não **o** produto.
 
-**A transição, em uma frase:** de "CRM de e-commerce com IA" para **"sistema operacional de vendas com agentes de IA, para qualquer negócio que vende pelo WhatsApp"**.
+**A linha Orbia, em uma frase:** um CRM da ORBIA para **administração e gestão de vendas**, com agentes de IA, WhatsApp e pagamentos como camada adicional — para qualquer negócio que vende conversando.
 
 ## O que acreditamos sobre agentes de IA
 
@@ -26,7 +25,7 @@ Os pedidos de feature dessa comunidade empurraram o produto na direção que hoj
 
 2. **Agentes que se auto-aprimoram.** O sistema é desenhado como um flywheel: conversas resolvidas viram conhecimento novo na base RAG; handoffs pro humano marcam onde o agente ainda não alcança; métricas e budget por tenant fecham o loop. Cada dia de operação torna o agente melhor — com **gate humano** nas decisões que importam. Essa é a aposta central do roadmap.
 
-3. **MCP como sistema nervoso.** O CRM inteiro é exposto como tools MCP — primeiro para os agentes internos, depois como contrato público. Um negócio deve poder plugar o agente que quiser (Claude, o que vier) e ele **opera** o Deskcomm: cria lead, responde cliente, agenda, consulta pedido. O CRM vira infraestrutura para agentes.
+3. **MCP como sistema nervoso.** O CRM inteiro é exposto como tools MCP — primeiro para os agentes internos, depois como contrato público. Um negócio deve poder plugar o agente que quiser (Claude, o que vier) e ele **opera** o OrbiaCRM: cria lead, responde cliente, agenda, consulta pedido. O CRM vira infraestrutura para agentes.
 
 4. **Humano no comando.** Handoff auditado, escopo por papel (RBAC), fila com posição, budget de IA por organização. Autonomia do agente cresce na medida em que a governança prova que ele acerta.
 
@@ -44,15 +43,15 @@ Os pedidos de feature dessa comunidade empurraram o produto na direção que hoj
 
 ## Posicionamento
 
-**Categoria de entrada (âncora):** a alternativa **open source e self-hosted** às plataformas fechadas de atendimento e vendas por WhatsApp (Kommo, Octadesk, Intercom, Zendesk).
+**Categoria de entrada (âncora):** a alternativa **open source e self-hosted** às plataformas fechadas de atendimento, CRM e gestão de vendas (Kommo, Octadesk, Intercom, Zendesk).
 
-**Categoria própria (bandeira):** **sistema operacional de vendas com agentes de IA** — *AI Sales OS*. É pra onde a âncora nos leva: os incumbentes vendem assinatura de chat com bot acoplado; nós entregamos um sistema onde o agente de IA é operador nativo e o código é seu.
+**Categoria própria (bandeira):** **CRM da ORBIA para administração e gestão de vendas, com agentes de IA**. Os incumbentes vendem assinatura de chat com bot acoplado; nós entregamos um sistema onde o agente de IA é operador nativo, o código é seu e os pagamentos são um módulo à parte, com várias marcas-superfície possíveis.
 
 **Uma frase (pt-br):**
-> DeskcommCRM é o sistema operacional de vendas open source com agentes de IA nativos e WhatsApp — self-hosted, multi-tenant, para qualquer negócio que vende conversando.
+> OrbiaCRM é o CRM da ORBIA para administração e gestão de vendas, com agentes de IA nativos e WhatsApp — self-hosted, multi-tenant, com pagamentos como módulo adicional, para qualquer negócio que vende conversando.
 
 **One-liner (en):**
-> Open-source AI sales OS: a self-hosted CRM where AI agents natively operate sales and support over WhatsApp — an open alternative to Kommo, Octadesk and Intercom.
+> OrbiaCRM: the ORBIA CRM for sales management and administration, with native AI agents and WhatsApp — self-hosted, with payments as an optional module and multiple surface brands.
 
 **Público:** negócios brasileiros (e além) que vendem pelo WhatsApp — e-commerce, clínicas, imobiliárias, infoprodutores, agências, serviços — e a comunidade dev/self-hosted que instala pra si ou pra clientes.
 
@@ -67,13 +66,15 @@ Os pedidos de feature dessa comunidade empurraram o produto na direção que hoj
 1. **Keyword primeiro, jargão depois.** Em todo título público: "open source", "AI agents", "WhatsApp", "CRM", "self-hosted" antes de qualquer nome interno de subsistema.
 2. **Mostrar, não descrever.** Screenshot/GIF do produto no primeiro scroll de qualquer página.
 3. **Âncora explícita.** "Alternativa open source a X" aparece no About do GitHub, no README e no site — é assim que a demanda dos incumbentes nos encontra (busca e LLMs).
-4. **E-commerce é exemplo, não definição.** Ao citar casos de uso, sempre em lista multi-nicho ("e-commerce, clínicas, imobiliárias...").
+4. **E-commerce é exemplo, não definição.** Ao citar casos de uso, sempre em lista multi-nicho ("e-commerce, clínicas, imobiliárias..."). Pagamentos são camada adicional, nunca a definição do produto.
 5. **Transparência de modelo.** Parceria HostGator e telemetria declaradas em linguagem humana no README, nunca escondidas.
 
 ## Norte de 3 anos
 
-Ser a resposta padrão — do Google, do ChatGPT, do Reddit e do dev brasileiro — para a pergunta **"qual o melhor CRM open source com agentes de IA e WhatsApp?"**; com milhares de instâncias self-hosted rodando, um ecossistema de agentes plugados via MCP público, e um flywheel de auto-aprimoramento que faça cada instância vender melhor a cada mês de operação.
+Ser a resposta padrão — do Google, do ChatGPT, do Reddit e do dev brasileiro — para a pergunta **"qual o melhor CRM open source com agentes de IA e WhatsApp para gestão de vendas?"**; com milhares de instâncias self-hosted rodando, um ecossistema de agentes plugados via MCP público, e um flywheel de auto-aprimoramento que faça cada instância vender melhor a cada mês de operação.
 
 ---
 
-*Última revisão: 2026-09-29 — quem instala pode cobrar os próprios clientes (ADR-0004). Anterior: 2026-07-19 — reposicionamento e-commerce → multi-nicho / AI Sales OS.*
+*Última revisão: 2026-11-25 — rebrand para OrbiaCRM: CRM da ORBIA focado em administração e gestão de vendas, pagamentos como módulo adicional. Revisões anteriores: 2026-09-29 (quem instala pode cobrar os próprios clientes, ADR-0004) e 2026-07-19 (reposicionamento e-commerce → multi-nicho / AI Sales OS).*
+
+*Crédito obrigatório: fork de DeskcommCRM, criado por Rafael Melgaço, sob licença MIT.*
