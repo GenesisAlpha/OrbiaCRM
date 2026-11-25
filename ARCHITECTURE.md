@@ -1,6 +1,7 @@
-# Architecture — DeskcommCRM
+# Architecture — OrbiaCRM
 
 > Visão de 1 página. Profundidade vive em `docs/specs/` e `docs/stories/epics/MASTER.md`.
+> OrbiaCRM é o CRM da ORBIA para administração e gestão de vendas; os pagamentos são um módulo adicional, com várias marcas-superfície possíveis.
 > Mapa de toda a documentação: [`docs/index.md`](docs/index.md).
 > Estado real de implementação (o que está pronto vs. incompleto): [`docs/current-state.md`](docs/current-state.md).
 
@@ -38,7 +39,7 @@ Detalhes: [`docs/specs/01-spec-platform-base.md`](docs/specs/01-spec-platform-ba
 
 ```
 request → proxy.ts (X-Request-Id, x-pathname; isPublicPath? → bypass;
-                    senão valida sessão Supabase via cookie sb-deskcomm-auth)
+                    senão valida sessão Supabase via cookie de sessão da instalação)
         → route handler:
              1. Zod valida o input externo
              2. guard: requireRole() | requirePlatformAdmin() | secret/HMAC
@@ -74,6 +75,7 @@ pelos 10 endpoints em `app/api/v1/cron/`. Contrato: [`docs/specs/07-spec-events-
 | **Upstash Redis** | rate limit + debounce de RAG | `lib/ai/dispatcher/rate-limit.ts`, `lib/ai/rag/debounce.ts` | degrada para memória com `warn` |
 | **Vercel AI Gateway** | LLM + embeddings (`@ai-sdk/anthropic\|openai\|google`) | `lib/ai/` | agente não responde |
 | **Nuvemshop** | e-commerce: pedidos, produtos, webhooks LGPD | `lib/nuvemshop/` | opcional (`NUVEMSHOP_ENABLED`) |
+| **Módulo financeiro** | contas, formas de pagamento, comandas, comissões e fidelidade — camada adicional, não o núcleo do CRM | `lib/` (módulo financeiro) | opcional |
 | **Sentry** | erros + performance, `beforeSend` higieniza PII | `sentry.*.config.ts`, `instrumentation*.ts` | opcional |
 | **Resend** | e-mail transacional (convite de time) | `lib/email/` | opcional — o convite cai em copy-to-clipboard |
 | **MCP** | CRM exposto como tools para agentes | `app/api/mcp/`, `lib/mcp/` | — |
@@ -97,3 +99,7 @@ pelos 10 endpoints em `app/api/v1/cron/`. Contrato: [`docs/specs/07-spec-events-
 - [`docs/index.md`](docs/index.md) — índice de toda a documentação.
 - [`docs/harness-audit.md`](docs/harness-audit.md) — maturidade do harness e lacunas de verificação.
 - [`docs/threat-model.md`](docs/threat-model.md) — superfície de ataque do self-host.
+
+---
+
+*OrbiaCRM é um fork de DeskcommCRM, criado por Rafael Melgaço, sob licença MIT. O aviso de copyright original e o agradecimento são mantidos conforme exigido pela licença.*
