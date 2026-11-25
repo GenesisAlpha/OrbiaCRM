@@ -4,19 +4,20 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/brand/deskcomm-logo-dark.svg">
-  <img src="docs/brand/deskcomm-logo.svg" alt="Deskcomm CRM" width="420">
+  <img src="docs/brand/deskcomm-logo.svg" alt="OrbiaCRM" width="420">
 </picture>
 
-# 🛠️ DeskcommCRM — The open-source AI Sales OS for WhatsApp
+# 🧭 OrbiaCRM - the ORBIA CRM for sales management, with AI and WhatsApp
 
-**AI agents that answer, qualify and sell on WhatsApp — inside an open-source CRM running on your own server.**
-**No subscription, no gated features, your data stays yours. The open alternative to Kommo, Octadesk and Intercom.**
+**AI agents that answer, qualify and sell on WhatsApp — inside the ORBIA CRM for administration and sales management, running on your own server.**
+**Payments are an additional module, with multiple possible surface brands. No subscription, no gated features, your data stays yours.**
+
 
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript)](https://www.typescriptlang.org)
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres%2BAuth%2BStorage-3ecf8e?logo=supabase)](https://supabase.com)
 [![Self-hosted](https://img.shields.io/badge/self--hosted-one%20command-orange)](hostgator-setup-kit/)
-[![CI](https://github.com/melgarafael/DeskcommCRM/actions/workflows/ci.yml/badge.svg)](https://github.com/melgarafael/DeskcommCRM/actions/workflows/ci.yml)
+[![CI](https://github.com/GenesisAlpha/OrbiaCRM/actions/workflows/ci.yml/badge.svg)](https://github.com/GenesisAlpha/OrbiaCRM/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/melgarafael)
@@ -25,15 +26,19 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [**⚡ Install**](#-install-on-your-vps-the-main-path) · [**🔄 Update**](#-updating) · [**🧭 Vision**](VISION.md) · [**🏗️ Architecture**](ARCHITECTURE.md) · [**🤝 Contributing**](CONTRIBUTING.en.md) · [**🗺️ Roadmap**](#%EF%B8%8F-roadmap)
 
-<img src="docs/assets/demo-deskcomm.gif" alt="DeskcommCRM demo: AI agents, sales pipeline and prospecting" width="800">
+<img src="docs/assets/demo-deskcomm.gif" alt="OrbiaCRM demo: AI agents, sales pipeline and prospecting" width="800">
 
 </div>
 
 ---
 
+> **Origin and license.** This repository is a fork of DeskcommCRM, created by Rafael Melgaço and distributed under the **MIT** license ([`LICENSE`](LICENSE)). We keep the original copyright notice and thank the work done. OrbiaCRM is the ORBIA product line, with its own identity, modules and roadmap.
+>
+> Branding and billing modules may evolve into variants (for example, dedicated payment surfaces) without changing the core of this CRM: **OrbiaCRM focuses on administration and sales management**, with payments as an integrated additional layer.
+
 > ### ☁️ Run this CRM in production with one command
 >
-> DeskcommCRM is developed in **partnership with HostGator**: the [`hostgator-setup-kit/`](hostgator-setup-kit/)
+> OrbiaCRM is developed in **partnership with HostGator**: the [`hostgator-setup-kit/`](hostgator-setup-kit/)
 > installs the full CRM (app + WhatsApp + database) on a VPS with a single command, and the
 > [production runbook](docs/runbooks/waha-hostgator.md) assumes that environment.
 >
@@ -45,7 +50,7 @@
 > command for your case:
 >
 > ```bash
-> curl -fsSL https://raw.githubusercontent.com/melgarafael/DeskcommCRM/main/hostgator-setup-kit/comecar.sh | bash
+> curl -fsSL https://raw.githubusercontent.com/GenesisAlpha/OrbiaCRM/main/hostgator-setup-kit/comecar.sh | bash
 > ```
 >
 > *(prefer to read before executing? clone the repo and run `bash hostgator-setup-kit/comecar.sh` —
@@ -78,8 +83,8 @@ That is not a freeze: the terminal is hiding your password. Type (or paste) it a
 Once inside the VPS:
 
 ```bash
-git clone https://github.com/melgarafael/DeskcommCRM.git
-cd DeskcommCRM
+git clone https://github.com/GenesisAlpha/OrbiaCRM.git
+cd OrbiaCRM
 bash hostgator-setup-kit/install.sh
 ```
 
@@ -144,19 +149,19 @@ prompt and contribute. To have them in **any folder** — including before cloni
 machine — run once:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/melgarafael/DeskcommCRM/main/scripts/instalar-guias.sh | bash
+curl -fsSL https://raw.githubusercontent.com/GenesisAlpha/OrbiaCRM/main/scripts/instalar-guias.sh | bash
 ```
 
 Then open a new session of your assistant and say *"I want to install the CRM on my VPS"*: asking
 for the subject in Portuguese triggers the right guide in any of the five. To call a guide by name,
-each one has its own way — `/deskcomm-instalar` in Claude Code, Cursor and Antigravity;
-`$deskcomm-instalar` in Codex; in OpenCode, ask for it by name, in natural language.
+each one has its own way — `/orbia-instalar` in Claude Code, Cursor and Antigravity;
+`$orbia-instalar` in Codex; in OpenCode, ask for it by name, in natural language.
 
 The guides do **not** update themselves: running the same command again brings the new version. To
 undo:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/melgarafael/DeskcommCRM/main/scripts/instalar-guias.sh | bash -s -- --remover
+curl -fsSL https://raw.githubusercontent.com/GenesisAlpha/OrbiaCRM/main/scripts/instalar-guias.sh | bash -s -- --remover
 ```
 
 With the repository already cloned, the guides come inside it (`.agents/skills/`) and none of that
@@ -191,7 +196,7 @@ broken app back.
 ### From the terminal
 
 ```bash
-cd /path/to/DeskcommCRM
+cd /path/to/OrbiaCRM
 bash hostgator-setup-kit/update.sh
 ```
 
@@ -262,7 +267,7 @@ installation has a custom `COMPOSE_PROJECT_NAME` that is no longer in the `.env`
 
 ## ✨ What is it
 
-**Deskcomm** comes from **Desk** + **comm** (commerce): your entire sales operation on a single desk, run by people and AI agents working together.
+**OrbiaCRM** is the CRM of **ORBIA**, built for administration and sales management. Payments enter as an additional module, with multiple possible surface brands.
 
 The project was born as an e-commerce CRM — and the open-source community took it much further: today it runs in **clinics, real-estate agencies, info-product businesses, agencies, stores and service providers** — any business that sells over WhatsApp. The product followed that shift and became a **sales operating system**: AI agents with per-tenant RAG answer customers, qualify leads, move them through the pipeline, trigger automations and know when to hand off to a human — with the whole CRM exposed via **MCP** so agents can truly operate it. The full story is in [`VISION.md`](VISION.md).
 
@@ -331,8 +336,8 @@ Details: [`ARCHITECTURE.md`](ARCHITECTURE.md).
 > This section is for people who will change the code.
 
 ```bash
-git clone https://github.com/melgarafael/DeskcommCRM.git
-cd DeskcommCRM
+git clone https://github.com/GenesisAlpha/OrbiaCRM.git
+cd OrbiaCRM
 
 nvm use                     # Node 22
 npm install -g pnpm && pnpm install
@@ -368,7 +373,7 @@ App: <http://localhost:3000> · Health check: <http://localhost:3000/api/v1/heal
 ## 📁 Structure
 
 ```
-DeskcommCRM/
+OrbiaCRM/
 ├── app/                    # Next.js App Router
 │   ├── (admin)/            # super-admin routes (impersonate, tenants)
 │   ├── (public)/           # Login, recovery
@@ -402,7 +407,7 @@ pnpm test:e2e      # Playwright (requires dev server)
 **These checks are required** to merge into `main`. This list has already said "four" and then "five" — **measure, don't trust it**:
 
 ```bash
-gh api repos/melgarafael/DeskcommCRM/branches/main/protection \
+gh api repos/GenesisAlpha/OrbiaCRM/branches/main/protection \
   --jq '.required_status_checks.contexts|join(", ")'
 # on 2026-08-14: verify, build-and-size, invariants, e2e, imagens-ok
 ```
@@ -476,7 +481,7 @@ Two required gates do **not** fit there and only run in CI: `e2e` (needs a local
 
 <a id="contributors-"></a>
 
-## 🙌 Who builds DeskcommCRM
+## 💻 Who builds OrbiaCRM
 
 Thanks to everyone who has contributed code, a well-reported bug, an idea, docs or a translation. To join this list, see [how to contribute](CONTRIBUTING.en.md) ([emoji key](https://allcontributors.org/docs/en/emoji-key)).
 
@@ -837,7 +842,7 @@ For **security vulnerabilities**, **do NOT open a public issue** — use [privat
 
 ### 🔮 Next
 
-- **Public MCP** — CRM capabilities exposed to the agent ecosystem: plug in any agent and it operates Deskcomm.
+- **Public MCP** — CRM capabilities exposed to the agent ecosystem: plug in any agent and it operates OrbiaCRM.
 - **Niche templates** — ready-made pipelines and vocabularies for clinics, real estate, info-products and services (e-commerce already shipped).
 - **Integrations** — VTEX and Shopify via the adapter pattern (Nuvemshop already shipped).
 - **Probabilistic identity** — contact unification across channels.
@@ -855,7 +860,7 @@ For **security vulnerabilities**, **do NOT open a public issue** — use [privat
 
 ## 📜 License
 
-Distributed under the **MIT** license — see [`LICENSE`](LICENSE). You may use, modify and distribute freely, including commercially. The software is provided **"as is", without warranties**.
+Distributed under the **MIT** license — see [`LICENSE`](LICENSE). The copyright notice of Rafael Melgaço is kept as required by the license. You may use, modify and distribute it freely, including commercially. The software is provided **"as is", without warranties**.
 
 ---
 
@@ -872,12 +877,13 @@ This is a **self-hosted** project: each person runs the CRM on their **own infra
 
 ## 🙏 Acknowledgements
 
+- **Rafael Melgaço and the DeskcommCRM community** — the base this fork was built on.
 - **WAHA** ([devlikeapro](https://waha.devlikeapro.com/)) — WhatsApp engine.
 - **Supabase** — Postgres + Auth + Storage + Realtime in one stack.
 - **HostGator** — the infrastructure partnership that made one-command self-hosting possible.
 - **Anthropic**, **OpenAI** and **OpenRouter** — the AI providers the CRM knows how to use.
 - **shadcn/ui** — component base.
-- The community that took Deskcomm from e-commerce to clinics, real estate, info-products and beyond — you defined what this project is.
+- The community that took DeskcommCRM from e-commerce to clinics, real estate, info-products and beyond — you defined what this project is.
 
 ---
 
