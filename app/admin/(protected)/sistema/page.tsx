@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { stripeAdminConfigured } from "@/lib/xpay/admin-stripe";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { notFound } from "next/navigation";
 
@@ -150,6 +152,11 @@ export default async function Page({
     <div className="space-y-8">
       <div className="space-y-1">
         <h1 className="text-2xl font-semibold tracking-tight">{traduzir("Recursos opcionais", idioma)}</h1>
+        {stripeAdminConfigured() ? (
+          <Link href="/admin/xpay" className="inline-flex text-sm font-medium text-primary hover:underline">
+            Gerir contas Stripe da XPAY
+          </Link>
+        ) : null}
         <p className="text-sm text-muted-foreground">
           {traduzir(
             "Tudo o que se liga e desliga nesta instalação, num lugar só. Vale para todas as empresas hospedadas aqui, e o que cada empresa usa pode ser ajustado abaixo.",
